@@ -13,6 +13,10 @@
         android:scaleType="fitXY"
         tools:ignore="ContentDescription" />
 
+    <include
+        android:id="@+id/popup"
+        layout="@layout/popup" />
+
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"

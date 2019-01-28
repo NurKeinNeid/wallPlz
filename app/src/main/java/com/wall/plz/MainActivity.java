@@ -55,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
         lockscreen = wallpaperManager.getWallpaperFile(WallpaperManager.FLAG_LOCK);
 
         Drawable wallpaperDrawable = wallpaperManager.getDrawable();
+
         defaultWallpaper = findViewById(R.id.imageView);
         defaultWallpaper.setImageDrawable(wallpaperDrawable);
 
@@ -147,5 +148,13 @@ public class MainActivity extends AppCompatActivity {
             ActivityCompat.checkSelfPermission(this,
                     Manifest.permission.READ_EXTERNAL_STORAGE);
         }
+    }
+
+    @Override
+    public void onRestart(){
+        super.onRestart();
+        Intent intent=new Intent(MainActivity.this,MainActivity.class);
+        startActivity(intent);
+        finish();
     }
 }
